@@ -26,3 +26,17 @@ POST http://localhost:8080/api/v1/authorize
 }
 
 ```
+
+Then you can simply get token by given credentials.
+
+POST http://localhost:8080/api/v1/token
+
+```
+{
+    "userName":"test@test1.com",
+    "password": "test"
+}
+```
+After that you can follow postman structure of 
+
+createBook, updateBook, createOrder, getOrderById, getOrderByDateInterval, getStatistics.
