@@ -85,14 +85,14 @@ Response:
         "orderId": "111c7ab7-28d7-4cbc-9a86-f39a4c7f2222",
         "orderDate": "20/05/2022 11:11:49",
         "status": "OUT_OF_STOCK",
-        "totalPrice": "18.15",
+        "totalPrice": "60.50",
         "description": "Stock does not have any book or enough quantity for given order",
         "orderDetail": {
             "quantity": 10,
             "book": {
                 "bookId": "2",
                 "name": "test2",
-                "price": "60.50"
+                "price": "6.05"
             }
         }
     }
