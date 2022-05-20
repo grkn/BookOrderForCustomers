@@ -59,7 +59,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userName\":\"test@test3.com\",\r\n    \"password\": \"test\"\r\n}",
+					"raw": "{\r\n    \"userName\":\"test@test4.com\",\r\n    \"password\": \"test\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -67,12 +67,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8091/api/v1/token",
+					"raw": "http://localhost:8080/api/v1/token",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8091",
+					"port": "8080",
 					"path": [
 						"api",
 						"v1",
@@ -98,12 +98,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8091/api/v1/user/orders?page=0&size=20",
+					"raw": "http://localhost:8080/api/v1/user/orders?page=0&size=20",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8091",
+					"port": "8080",
 					"path": [
 						"api",
 						"v1",
@@ -165,12 +165,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8091/api/v1/book",
+					"raw": "http://localhost:8080/api/v1/book",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8091",
+					"port": "8080",
 					"path": [
 						"api",
 						"v1",
@@ -205,12 +205,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8091/api/v1/book/{{bookId}}",
+					"raw": "http://localhost:8080/api/v1/book/{{bookId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8091",
+					"port": "8080",
 					"path": [
 						"api",
 						"v1",
@@ -262,12 +262,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8091/api/v1/orders",
+					"raw": "http://localhost:8080/api/v1/orders",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8091",
+					"port": "8080",
 					"path": [
 						"api",
 						"v1",
@@ -366,12 +366,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8091/api/v1/statistics",
+					"raw": "http://localhost:8080/api/v1/statistics",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8091",
+					"port": "8080",
 					"path": [
 						"api",
 						"v1",

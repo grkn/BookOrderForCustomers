@@ -19,7 +19,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <h2.version>1.4.200</h2.version>
-        <lombok.version>1.18.12</lombok.version>
+        <lombok.version>1.18.20</lombok.version>
         <validation.api.version>2.0.1.Final</validation.api.version>
         <hibernate.validator.version>6.2.0.Final</hibernate.validator.version>
         <auth.jwt.version>3.10.3</auth.jwt.version>
@@ -101,6 +101,18 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.reading.is.good.Application</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
