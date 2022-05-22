@@ -56,7 +56,6 @@ public class OrderService {
                 order.setDescription("Stock does not have any book or enough quantity for given order");
             } catch (Exception ex) {
                 LOGGER.info("Order is failed: {} for given user: {}. Error Message: {}", order, userName, ex.getMessage());
-                ex.printStackTrace();
                 order.setStatus(FAILED);
                 order.setDescription("Unknown Exception occurred. Please contact your administrator.");
             } finally {
