@@ -62,11 +62,14 @@ public class UserService {
         String password = passwordEncoder.encode(userEntity.getPassword());
         userEntity.setPassword(password);
 
+
+        userEntity = userRepository.save(userEntity);
+
         customerRepository.save(Customer.builder()
                 .username(userEntity.getUserName())
                 .build());
         LOGGER.trace("Create user request is finished for user: {} ", userEntity.getUserName());
-        return userRepository.save(userEntity);
+        return userEntity;
     }
 
     public String createToken(UserEntity userEntity) {
