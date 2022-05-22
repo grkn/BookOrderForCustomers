@@ -19,10 +19,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -107,7 +104,9 @@ public class OrderService {
                 customer.getOrders().add(newOrder);
             } else {
                 // Empty order
-                customer.setOrders(List.of(newOrder));
+                List<Order> newOrderList = new ArrayList<>();
+                newOrderList.add(newOrder);
+                customer.setOrders(newOrderList);
             }
         }
 
