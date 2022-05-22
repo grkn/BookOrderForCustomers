@@ -60,7 +60,7 @@ public class JWTFilter extends OncePerRequestFilter {
                         .collect(Collectors.toList());
                 SecurityContextHolder.getContext().setAuthentication(
                         new UsernamePasswordAuthenticationToken(userEntity.getUserName(), userEntity.getPassword(), authList));
-                LOGGER.debug("User has been found by given username: {} with authorities: {}", userName, authList.toString());
+                LOGGER.debug("User has been found by given username: {} with authorities: {}", userName, authList);
             } catch (NotFoundException ex) {
                 LOGGER.warn("User couldn't be found with given username: {}", userName);
                 generateErrorResponse(httpServletResponse, ExceptionResponse.NOT_FOUND);
@@ -76,7 +76,8 @@ public class JWTFilter extends OncePerRequestFilter {
         httpServletResponse.setContentType(MediaType.APPLICATION_JSON_VALUE);
         httpServletResponse.setStatus(exceptionResponse.getStatus().value());
         ErrorResource errorResource = new ErrorResource(exceptionResponse.getCode(),
-                exceptionResponse.getMessage());
+                exceptionResponse.equals(ExceptionResponse.NOT_FOUND) ?
+                        "User can not be found with given token" : exceptionResponse.getMessage());
         httpServletResponse.getWriter().write(objectMapper.writeValueAsString(errorResource));
         LOGGER.trace("Error response is {}", errorResource);
         httpServletResponse.getWriter().flush();
